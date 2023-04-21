@@ -77,6 +77,9 @@ export const ConfirmationPage = () => {
     setCard(originalCard.filter((e) => e.category === category));
   };
 
+
+   
+
   return (
     <div>
       <div>
@@ -94,9 +97,30 @@ export const ConfirmationPage = () => {
           </select>
         </div>
       </div>
-    
+      <div>
+        <input
+          onChange={(e) => {
+            console.log("f");
+           
+          }}
+          style={{
+            marginLeft: "50%",
+            height: "50px",
+            width: "30%",
+            border: "2px solid teal",
+            textAlign: "center",
+          }}
+          type="text"
+          placeholder="Search"
+        />
+      </div>
 
-      <div className=" grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4">
+      <div
+        className=" grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4"
+        style={{
+          marginTop: "20px",
+        }}
+      >
         {card.map((e) => (
           <div key={e.id} className="shadow-lg rounded-3xl overflow-hidden">
             <div className="h-40 sm:h-56 md:h-64 lg:h-72 xl:h-80 relative">
