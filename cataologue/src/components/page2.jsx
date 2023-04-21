@@ -89,7 +89,7 @@ export const ConfirmationPage = () => {
         </div>
         <div>
           <select onChange={(e) => filtertype(e, e.target.value)}>
-            <option value="">---</option>
+            <option value="">Select Category</option>
             <option value="electronics">Electronics</option>
             <option value="jewelery">Jewelery</option>
             <option value="men's clothing">men's clothing</option>

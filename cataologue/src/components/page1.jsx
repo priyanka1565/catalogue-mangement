@@ -25,9 +25,18 @@ export const RegistrationForm = () => {
           alignItems: "center",
           justifyContent: "center",
           marginLeft: "40%",
-          boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+          boxShadow:
+            "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
         }}
       >
+        <h1
+          style={{
+            fontFamily: "sans-serif",
+            fontWeight: "700",
+          }}
+        >
+          Log In
+        </h1>
         <label>
           Name:
           <input
@@ -57,21 +66,24 @@ export const RegistrationForm = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
+        <button
+          style={{
+            marginLeft: "50%",
+            marginRight: "180px",
+            marginTop:"40px",
+            height: "40px",
+            width: "120px",
+            textAlign: "center",
+            backgroundColor: "teal",
+             boxShadow: "5px 10px"
+          }}
+          className="rounded-3xl text-white text-xl w-40"
+          type="submit"
+        >
+          Register
+        </button>
       </div>
-      <button
-        style={{
-          marginLeft: "50%",
-          marginTop: "-70%",
-          height: "40px",
-          width: "120px",
-          textAlign: "center",
-          backgroundColor:"teal"
-        }}
-        className="rounded-3xl text-white text-xl w-40"
-        type="submit"
-      >
-        Register
-      </button>
+
       <br />
     </form>
   );
