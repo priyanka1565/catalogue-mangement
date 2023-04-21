@@ -110,9 +110,9 @@ export const ConfirmationPage = () => {
           }}
           style={{
             marginLeft: "50%",
-            marginTop: "-50px",
-            height: "50px",
-            width: "30%",
+            marginTop:"-30px",
+            height: "40px",
+            width: "20%",
             border: "2px solid teal",
             textAlign: "center",
           }}
