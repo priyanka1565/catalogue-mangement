@@ -102,6 +102,7 @@ export const ConfirmationPage = () => {
           </select>
         </div>
       </div>
+
       <div style={{}}>
         <input
           onChange={(e) => {
@@ -169,7 +170,7 @@ export const ConfirmationPage = () => {
         {" "}
         Analyse{" "}
       </button>
-      <canva id="chart"></canva>
+      <canvas id="chart"></canvas>
     </div>
   );
 };
