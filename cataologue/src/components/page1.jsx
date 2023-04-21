@@ -48,6 +48,7 @@ export const RegistrationForm = () => {
             type="text"
             value={name}
             placeholder="Enter Email"
+            required
             onChange={(e) => setName(e.target.value)}
           />
         </label>
@@ -63,6 +64,7 @@ export const RegistrationForm = () => {
             type="email"
             value={email}
             placeholder="Enter Name"
+            required
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
@@ -70,12 +72,12 @@ export const RegistrationForm = () => {
           style={{
             marginLeft: "50%",
             marginRight: "180px",
-            marginTop:"40px",
+            marginTop: "40px",
             height: "40px",
             width: "120px",
             textAlign: "center",
             backgroundColor: "teal",
-             boxShadow: "5px 10px"
+            boxShadow: "5px 10px",
           }}
           className="rounded-3xl text-white text-xl w-40"
           type="submit"
