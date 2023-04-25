@@ -7,18 +7,26 @@ let chart = null;
 
 export const ConfirmationPage = () => {
   const location = useLocation();
+  //console.log(location)
   const { name, email } = location.state;
 
   const [card, setCard] = useState([]);
+  //console.log(card)
   const [originalCard, setOriginalCard] = useState([]);
+  //console.log(originalCard)
   const [expandedCardId, setExpandedCardId] = useState(null);
+  //console.log(expandedCardId);
   const [showChart, setShowChart] = useState(false);
+  //console.log(showChart);
 
   const toggleExpandCard = (id) => {
     if (id === expandedCardId) {
       setExpandedCardId(null);
+      //console.log(id);
+
     } else {
       setExpandedCardId(id);
+      //console.log(id)
     }
   };
 
@@ -26,11 +34,17 @@ export const ConfirmationPage = () => {
     const data = {};
     card.map((product) => {
       const category = product.category;
+      //console.log(category)
       data[category] = data[category] ? data[category] + 1 : 1;
+    
     });
 
+
+
     const labels = Object.keys(data);
+    //console.log(labels)
     const values = Object.values(data);
+  
 
     return { labels, values };
   };
@@ -38,6 +52,7 @@ export const ConfirmationPage = () => {
   function handleAnalyse() {
     const { labels, values } = generateChartData(card);
     const chartElement = document.getElementById("chart");
+    //console.log(labels)
 
     if (!chart) {
       chart = new Chart(chartElement, {
